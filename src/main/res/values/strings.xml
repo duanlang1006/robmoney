@@ -1,0 +1,42 @@
+<resources>
+    <string name="app_name">智能提示</string>
+    <string name="action_robmoney">智能提示</string>
+    <string name="action_vip">vip</string>
+    <string name="action_settings">设置</string>
+    <string name="app_version">No.1</string>
+
+    <string name="rob_title">智能抢红包</string>
+    <string name="preference">偏好设置</string>
+    <string name="service_name">设置智能提示服务</string>
+    <string name="app_set_know">知道啦～</string>
+    <string name="guide_set">去设置</string>
+    <string name="guide_next">下一步</string>
+
+    <string name="accessibility_description">打开辅助服务开关就可以了,
+        我们不会进行任何威胁您的动作，请放心开启并随时接受各类安全杀毒软件监督。</string>
+
+    <string name="miui_setting_title">MIUI设备需要开启的选项</string>
+    <string name="miui_setting_message">小米手机设置下授权管理中的</string>
+    <string name="emui_setting_title">EMUI设备需要开启的选项</string>
+    <string name="emui_setting_message">华为手机设置下受保护应用中的</string>
+    <string name="miui">Xiaomi</string>
+    <string name="emui">HUAWEI</string>
+
+    <string name="rob_set_service_notify">找到智能提示，设置即可</string>
+    <string name="welcome_app_title">智能提示</string>
+    <string name="welcome_title_summary">智能提示@版权所有</string>
+
+    <string name="alertStrTitle">给好评送红包，并开放快速，极速抢红包功能</string>
+    <string name="alertStr">在市场给5星好评，说抢红包很快，每次都抢到了等赞语，立即开启快速，极速抢红包功能，
+    并在3天内(不定时)送10元微信红包，届时请关注微信！</string>
+
+    <string name="share_str">“智能提示”是一款不错的自动抢红包工具，安全绿色，推荐给大家使用！</string>
+
+    <string name="set_accessibility_msg">"在“设置-辅助功能-服务”中，点击“智能提示”，打开即可。"</string>
+
+    <string name="rob_share_start">点击</string>
+    <string name="rob_share_key">分享</string>
+    <string name="rob_share_end">即可查看详情</string>
+    <string name="rob_payment_loading">正在加载</string>
+
+</resources>

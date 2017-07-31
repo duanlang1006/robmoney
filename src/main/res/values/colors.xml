@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="transparent">#00000000</color>
+    <color name="half_transparent">#50000000</color>
+
+    <color name="red">#ff0000</color>
+    <color name="black">#000000</color>
+    <color name="yellow">#f8e37a</color>
+    <color name="white">#ffffff</color>
+    <color name="basic">#cccccc</color>
+    <color name="title_bg">#000000</color>
+    <color name="crazy_bg">#a4958f</color>
+    <color name="crazy_title_background">#6e2702</color>
+    <color name="crazy_text">#4b1a01</color>
+
+    <color name="crazy_start_text">#fff200</color>
+    <color name="crazy_start_click">#cf5107</color>
+    <color name="crazy_start_noclick">#d84e43</color>
+    <color name="crazy_click">#bc5a05</color>
+    <color name="crazy_noclick">#833005</color>
+
+    <color name="agenda_item_title_color">#ff454545</color>
+    <color name="agenda_item_desc_color">#ff777777</color>
+
+</resources>

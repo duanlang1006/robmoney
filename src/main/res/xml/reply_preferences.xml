@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:icon="@null"
+    tools:context=".activity.SettingsActivity">
+    <PreferenceCategory
+        android:layout="@layout/preference_category"
+        android:title="自动答谢(Android 5.0以上系统支持)">
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="pref_reply_switch"
+            android:layout="@layout/preference_checkbox"
+            android:summary="在拆开其他人的红包后发送自动回复"
+            android:title="开启自动答谢" />
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:layout="@layout/preference_category"
+        android:title="答谢选项">
+        <com.mit.money.view.SeekBarPreference
+            pref_kind="pref_reply_delay"
+            android:key="pref_reply_delay"
+            android:layout="@layout/preference_checkbox"
+            android:title="延时发送回复" />
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="pref_reply_at"
+            android:layout="@layout/preference_checkbox"
+            android:title="\@发红包的人" />
+        <EditTextPreference
+            android:key="pref_reply_words"
+            android:layout="@layout/preference_checkbox"
+            android:title="自定义答谢内容" />
+    </PreferenceCategory>
+</PreferenceScreen>

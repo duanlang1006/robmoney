@@ -1,0 +1,116 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.2"
+
+    defaultConfig {
+        applicationId "com.mit.money"
+        minSdkVersion 8
+        targetSdkVersion 23
+        versionCode 23
+        versionName "1.0.23"
+
+        multiDexEnabled true
+        manifestPlaceholders = [APKPLUG_APPID: "685d4a881062c0c7"]
+
+    }
+    // 移除lint检查的error
+    lintOptions {
+        abortOnError false
+    }
+
+    signingConfigs {
+        debug {
+            keyAlias 'luckstore'
+            keyPassword 'luck123456'
+            storeFile file('../luckstore.jks')
+            storePassword 'luck123456'
+        }
+        release {
+            keyAlias 'luckstore'
+            keyPassword 'luck123456'
+            storeFile file('../luckstore.jks')
+            storePassword 'luck123456'
+        }
+    }
+    buildTypes {
+        debug {
+            // 显示Log
+            buildConfigField "boolean", "LOG_DEBUG", "true"
+
+            versionNameSuffix "-debug"
+            minifyEnabled false
+            zipAlignEnabled false
+            shrinkResources false
+            signingConfig signingConfigs.debug
+        }
+
+        release {
+            // 不显示Log
+            buildConfigField "boolean", "LOG_DEBUG", "false"
+
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+
+            zipAlignEnabled true
+            // 移除无用的resource文件
+            shrinkResources true
+            signingConfig signingConfigs.release
+
+            applicationVariants.all { variant ->
+                variant.outputs.each { output ->
+                    def outputFile = output.outputFile
+                    if (outputFile != null && outputFile.name.endsWith('.apk')) {
+                        // 输出apk名称为fuli_v1.0_wandoujia.apk
+                        def fileName = "${applicationId}_v${versionName}_${variant.buildType.name}.apk"
+                        output.outputFile = new File(outputFile.parent, fileName)
+                    }
+                }
+            }
+        }
+    }
+
+    task apkZip(type: Zip) {
+        classifier = 'build'
+        from 'build/outputs/apk/'
+        include '*_release.apk'
+        from "../"
+        include 'version_readme.txt'
+        destinationDir file('.')
+        archiveName "../luck_v${defaultConfig.versionName}.zip"
+    }
+
+    task setTag(type: Exec) {
+        executable "git"
+        args "tag"
+        args "-af"
+        args "luck_v${defaultConfig.versionName}"
+        args "-m"
+        args "release for luck_v${defaultConfig.versionName}"
+    }
+
+    task pushTag(type: Exec) {
+        executable "git"
+        args "push"
+        args "origin"
+        args "--tags"
+        args "-f"
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    provided files('../extras/apkplug/ref_libs/osgi2.8.0.jar')
+    provided files('../extras/mitanalytics/mit-analytics-v1.0.jar')
+    provided files('../extras/mitanalytics/libs/umeng-analytics-game-v5.6.4.0.jar')
+    provided files('ref_libs/android-support-v4.jar')
+    provided files('../extras/mitupdate/libs/umeng-update-v2.6.0.1.jar')
+    compile 'com.google.code.gson:gson:2.2.4'
+    compile project(':extras:dsclocation')
+    compile project(':extras:dscfeedback')
+    compile project(':extras:dsccore')
+    compile project(':extras:commonwidget')
+    compile files('libs/libpingpp-2.1.1.jar')
+    compile files('libs/libammsdk.jar')
+}

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:icon="@null"
+    tools:context=".activity.SettingsActivity">
+
+    <PreferenceCategory
+        android:layout="@layout/preference_category"
+        android:title="评价">
+        <Preference
+            android:key="pref_praise"
+            android:summary="表扬一下，做的还行"
+            android:title="点赞" />
+        <Preference
+            android:key="pref_feedback"
+            android:summary="有任何不满意的地方都说出来吧"
+            android:title="吐槽" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:layout="@layout/preference_category"
+        android:title="监视选项">
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="pref_watch_wechat"
+            android:layout="@layout/wechat_preference_checkbox"
+            android:summary="读取微信新消息通知中的红包提示并进入聊天页"
+            android:title="监视微信红包" />
+        <!--<CheckBoxPreference-->
+        <!--android:defaultValue="true"-->
+        <!--android:key="pref_watch_qq"-->
+        <!--android:layout="@layout/qq_preference_checkbox"-->
+        <!--android:summary="读取QQ新消息通知中的红包提示并进入聊天页"-->
+        <!--android:title="监视QQ红包" />-->
+        <!--<CheckBoxPreference-->
+        <!--android:defaultValue="true"-->
+        <!--android:key="pref_watch_wechat_list"-->
+        <!--android:layout="@layout/preference_checkbox"-->
+        <!--android:summary="读取微信聊天列表中的红包提示并进入聊天页"-->
+        <!--android:title="监视微信聊天列表" />-->
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:layout="@layout/preference_category"
+        android:title="防封号选项">
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="pref_open_packet"
+            android:layout="@layout/preference_checkbox"
+            android:title="自动拆开红包" />
+        <!--<com.mit.money.view.SeekBarPreference-->
+        <!--pref_kind="pref_open_delay"-->
+        <!--android:key="pref_open_delay"-->
+        <!--android:layout="@layout/preference_checkbox"-->
+        <!--android:title="延时拆开红包" />-->
+        <!--<CheckBoxPreference-->
+        <!--android:defaultValue="true"-->
+        <!--android:key="pref_watch_self"-->
+        <!--android:layout="@layout/preference_checkbox"-->
+        <!--android:title="拆开自己发的红包" />-->
+        <!--<PreferenceScreen-->
+        <!--android:key="pref_auto_reply"-->
+        <!--android:layout="@layout/preference_checkbox"-->
+        <!--android:title="拆开红包后自动回复">-->
+        <!--<intent-->
+        <!--android:action="android.intent.action.VIEW"-->
+        <!--android:targetClass="com.mit.money.activity.SettingsActivity"-->
+        <!--android:targetPackage="com.mit.money">-->
+        <!--<extra-->
+        <!--android:name="title"-->
+        <!--android:value="自动回复设置" />-->
+        <!--<extra-->
+        <!--android:name="frag_id"-->
+        <!--android:value="ReplySettingsFragment" />-->
+        <!--</intent>-->
+        <!--</PreferenceScreen>-->
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:layout="@layout/preference_category"
+        android:title="应用信息">
+        <Preference
+            android:key="pref_version"
+            android:title="版本号" />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

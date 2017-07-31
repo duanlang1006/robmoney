@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/half_transparent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:weightSum="7.0">
+
+        <TextView
+            android:layout_width="0.0dip"
+            android:layout_height="0.0dip"
+            android:layout_weight="0.5" />
+
+        <!--<TextView-->
+        <!--android:id="@+id/guide_title"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="0dp"-->
+        <!--android:layout_weight="1.5"-->
+        <!--android:textColor="@color/red"-->
+        <!--android:textSize="@dimen/guide_title_text_size" />-->
+
+        <TextView
+            android:layout_width="0.0dip"
+            android:layout_height="0.0dip"
+            android:layout_weight="1" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="2.5"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="bottom"
+                android:paddingLeft="16.0dip">
+
+                <TextView
+                    style="@style/GuideTextNormal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" " />
+
+                <TextView
+                    style="@style/GuideTextHighLight"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="关闭 " />
+
+                <TextView
+                    style="@style/GuideTextNormal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" 所有群或人的" />
+            </LinearLayout>
+
+            <TextView
+                style="@style/GuideTextHighLight"
+                android:paddingLeft="16.0dip"
+                android:text="消息免打扰" />
+
+            <TextView
+                style="@style/GuideTextNormal"
+                android:paddingLeft="16.0dip"
+                android:text="开关!!!" />
+
+
+            <FrameLayout
+                android:layout_width="fill_parent"
+                android:layout_height="0.0dip"
+                android:layout_marginTop="10.0dip"
+                android:layout_weight="1.0">
+
+                <ImageView
+                    android:id="@+id/guide_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center" />
+            </FrameLayout>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="0.0dip"
+            android:layout_height="0.0dip"
+            android:layout_weight="1" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/guide_close"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/app_set_know"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

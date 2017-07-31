@@ -1,0 +1,22 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+
+    <dimen name="rob_button_text_size">20sp</dimen>
+
+    <dimen name="general_titlebar_height">38.0dip</dimen>
+    <dimen name="title_high">40.0dip</dimen>
+    <dimen name="guide_title_text_size">28sp</dimen>
+    <dimen name="poings_zc">160.0dip</dimen>
+    <dimen name="points_text_size">25sp</dimen>
+
+    <dimen name="guide_button_width">80dp</dimen>
+
+    <dimen name="app_bar_height">180dp</dimen>
+    <dimen name="text_margin">16dp</dimen>
+
+    <dimen name="rob_record_item_padding_size">5dp</dimen>
+
+</resources>
